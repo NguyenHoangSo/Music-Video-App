@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+html {
+    box-sizing: border-box;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    top: -50%;
+    left: -50%;
+}
+.background img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 50%;
+    min-height: 50%;
+    filter: blur(10px);
+    transform: scale(1.1);
+    -webkit-filter: blur(50px);
+}
+.container {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 400px;
+    background-color: #eee;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0 ,0,0.3);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container:hover {
+    box-shadow: 0 15px 30px rgba(0,0 ,0,0.6);
+}
+.player-music {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+.player-music img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.4);
+}
+.player-music:hover img {
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
+}
+.player-music img.active {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    opacity: 1;
+}
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 30px 0 0;
+}
+h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 0;
+}
+.player-progress {
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin: 40px 20px 30px;
+    cursor: pointer;
+}
+.music-duration {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -25px;
+}
+.progress {
+    background-color: #212121;
+    border-radius: 5px;
+    width: 0%;
+    height: 100%;
+}
+.player-controll {
+    position: relative;
+    top: -20px;
+    left: 135px;
+    display: flex;
+    align-items: center;
+}
+.fa-solid {
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: #666;
+}
+.fa-solid:hover {
+    filter: brightness(40%);
+}
+.play-button {
+    font-size: 44px;
+    top: 3px;
+    position: relative;
+}
